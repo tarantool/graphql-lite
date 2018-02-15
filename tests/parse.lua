@@ -1,5 +1,5 @@
 describe('parse', function()
-  local parse = require 'graphql.parse'
+  local parse = require('graphql_lite.parse').parse
 
   test('comments', function()
     local document

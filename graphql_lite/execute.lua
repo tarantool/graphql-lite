@@ -249,3 +249,6 @@ return function(schema, tree, rootValue, variables, operationName)
 
   return evaluateSelections(rootType, rootValue, context.operation.selectionSet.selections, context)
 end
+
+
+return {execute=execute}

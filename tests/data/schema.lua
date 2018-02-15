@@ -1,5 +1,5 @@
-local types = require 'graphql.types'
-local schema = require 'graphql.schema'
+local types = require 'graphql_lite.types'
+local schema = require 'graphql_lite.schema'
 
 local dogCommand = types.enum({
   name = 'DogCommand',

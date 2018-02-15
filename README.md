@@ -1,28 +1,20 @@
-GraphQL Lua [![Join the chat at https://gitter.im/bjornbytes/graphql-lua](https://badges.gitter.im/bjornbytes/graphql-lua.svg)](https://gitter.im/bjornbytes/graphql-lua?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-===
+# GraphQL Lua
 
-Lua implementation of GraphQL.
 
-Installation
-------------
+Lua implementation of GraphQL for Tarantool.
 
-1. Using luvit
+## Installation
 
-        lit install bjornbytes/graphql
-    
-2. Using luarocks
+tarantoolctl rocks install graphql_lite
 
-        luarocks install graphql
-
-Example
----
+## Example
 
 ```lua
-local parse = require 'graphql.parse'
-local schema = require 'graphql.schema'
-local types = require 'graphql.types'
-local validate = require 'graphql.validate'
-local execute = require 'graphql.execute'
+local parse = require 'graphql_lite.parse'
+local schema = require 'graphql_lite.schema'
+local types = require 'graphql_lite.types'
+local validate = require 'graphql_lite.validate'
+local execute = require 'graphql_lite.execute'
 
 -- Parse a query
 local ast = parse [[
@@ -91,8 +83,7 @@ execute(schema, ast, rootValue, variables, operationName)
 ]]
 ```
 
-Status
----
+## Status
 
 - [x] Parsing
   - [ ] Improve error messages
@@ -103,14 +94,12 @@ Status
   - [ ] Asynchronous execution (coroutines)
 - [ ] Example server
 
-Running tests
----
+## Running tests
 
 ```lua
 lua tests/runner.lua
 ```
 
-License
----
+## License
 
 MIT

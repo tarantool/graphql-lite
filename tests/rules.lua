@@ -1,5 +1,5 @@
-local parse = require 'graphql.parse'
-local validate = require 'graphql.validate'
+local parse = require('graphql_lite.parse').parse
+local validate = require('graphql_lite.validate').validate
 local schema = require 'tests/data/schema'
 
 local function expectError(message, document)
@@ -127,7 +127,7 @@ describe('rules', function()
 
   describe('compositeFieldsAreNotLeaves', function()
     local message = 'Composite types must have subselections'
-    
+
     it('fails if an object is a leaf', function()
       expectError(message, '{ dog }')
     end)
